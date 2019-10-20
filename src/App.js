@@ -1,6 +1,6 @@
 import React from 'react';
 import Movie from './Movie';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const movieData = [
   {
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       {movieData.map(movie => (
-        <Movie key={movie.id} title={movie.name} img={movie.img} rating={movie.rating} />
+        <Movie key={movie.id} name={movie.name} img={movie.img} rating={movie.rating} />
       ))}
     </div>
   );
