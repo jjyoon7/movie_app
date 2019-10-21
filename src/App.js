@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Movie from './Movie';
 import axios from 'axios';
-
-Movie.propTypes = {
-  name: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-  img: PropTypes.string.isRequired
-}
+import yargsParser from 'yargs-parser';
 
 function App() {
   const [isLoading, setLoading] = useState(true)
@@ -20,10 +15,13 @@ function App() {
 
   useEffect(() => {
     getMovies();
-  })
+  }, [])
+
   return (
     <div className="App">
-      {isLoading ? "we are loading bunch of movies" : "we are ready"}
+      {isLoading ? "we are loading bunch of movies" : movies.map(movie => {
+        return <Movie id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image}/>
+      })}
     </div>
   );
 }

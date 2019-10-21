@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import { prototype } from 'module';
 
-
-export default function Movie({ name, img, rating }){
-    return <h1></h1>
+export default function Movie({ id, year, title, summary, poster }){
+    return <h4>{title}</h4>
 }
 
-Movie.PropTypes = {
+Movie.propTypes = {
     id: PropTypes.number.isRequired,
+    year: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    summary: prototype.string.isRequired,
-    poster: prototype.string.isRequired
+    summary: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired
 }
