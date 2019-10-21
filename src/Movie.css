@@ -1,0 +1,33 @@
+.movie-title {
+    color: #2f2f2f;
+}
+
+.movie {
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    font-family: sans-serif;
+    color: gray;
+}
+
+.effect4
+{
+  position: relative;
+}
+.effect4:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(3deg);
+}

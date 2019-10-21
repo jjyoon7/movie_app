@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Movie from './Movie';
 import axios from 'axios';
-import yargsParser from 'yargs-parser';
 import './App.css'
 
 export default function App() {
