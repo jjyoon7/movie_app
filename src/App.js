@@ -20,12 +20,22 @@ export default function App() {
     getMovies();
   }, [])
   
+  const movieMap = movies.map(movie => (
+    <Movie key={movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image}  />
+  ))
+
   return (
-    <div className="App">
-      {isLoading ? "we are loading bunch of movies" : movies.map(movie => (
-        <Movie key={movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.medium_cover_image}  />
-      ))}
-    </div>
+    <section class="container">
+      {isLoading ? (
+        <div class="loader">
+          <span class="looader-text">Loading...</span>
+        </div>
+      ) : (
+        <div class="movies">
+          {movieMap}
+        </div>
+      )}
+    </section>
   );
 }
 
