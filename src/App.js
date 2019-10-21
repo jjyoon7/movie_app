@@ -12,8 +12,12 @@ Movie.propTypes = {
 function App() {
   const [movie, setMovie] = useState("")
 
+  const getMovies = async () => {
+    const movies = await axios.get("https://yts.lt/api/v2/list_movies.json");
+  }
+
   useEffect(() => {
-    axios.get("https://yts.lt/api/v2/list_movies.json");
+    getMovies();
     console.log("useEffect is called")
   })
   return (
