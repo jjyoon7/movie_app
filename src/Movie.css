@@ -37,3 +37,8 @@
     max-width: 16em;
     box-shadow: 0 10px 6px -6px #777;
 }
+
+.movie-genres {
+    list-style-type: katakana;
+    /* margin: 0; */
+}

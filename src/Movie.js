@@ -9,7 +9,7 @@ export default function Movie({ year, title, summary, poster, genres }){
                     <h2 className="movie-title">{title}</h2>
                     <h4 className="movie-year">{year}</h4>
                     <ul className="movie-genres">{genres.map((genre, index) => <li key={index} className="genres-genre">{genre}</li>)}</ul>
-                    <p className="movie-summary">{summary}</p>
+                    <p className="movie-summary">{summary.slice(0, 250)}...</p>
                 </div>
             </div>
 }
