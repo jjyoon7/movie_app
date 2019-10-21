@@ -2,7 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 export default function Movie({ id, year, title, summary, poster }){
-    return <h4>{title}</h4>
+    return <div>
+                <h2>{title}</h2>
+                <h4>{year}</h4>
+                <img src={poster}></img>
+                <p>{summary}</p>
+            </div>
 }
 
 Movie.propTypes = {
