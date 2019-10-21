@@ -13,7 +13,7 @@ function App() {
   const [movies, setMovie] = useState([])
 
   const getMovies = async () => {
-    const {data: {data: { movies }}} = await axios.get("https://yts.lt/api/v2/list_movies.json");
+    const {data: {data: { movies }}} = await axios.get("https://yts.lt/api/v2/list_movies.json?sort_by=rating");
     setMovie({movies})
     setLoading(false)
   }
