@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Movie from './Movie';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 
 Movie.propTypes = {
