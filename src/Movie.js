@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import './Movie.css'
 
 export default function Movie({ year, title, summary, poster }){
     return <div class="movie">
