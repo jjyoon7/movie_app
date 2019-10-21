@@ -10,19 +10,21 @@ Movie.propTypes = {
 }
 
 function App() {
-  const [movie, setMovie] = useState("")
+  const [isLoading, setLoading] = useState(true)
+  const [movies, setMovie] = useState([])
 
   const getMovies = async () => {
-    const movies = await axios.get("https://yts.lt/api/v2/list_movies.json");
+    const {data: {data: { movies }}} = await axios.get("https://yts.lt/api/v2/list_movies.json");
+    setMovie({movies})
+    setLoading(false)
   }
 
   useEffect(() => {
     getMovies();
-    console.log("useEffect is called")
   })
   return (
     <div className="App">
-
+      {isLoading ? "we are loading bunch of movies" : "we are ready"}
     </div>
   );
 }
