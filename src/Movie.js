@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Movie.css'
 
 export default function Movie({ year, title, summary, poster, genres }){
-    return <div className="movie effect4">
+    return <div className="movie movie-effect">
                 <img className="movie-poster" src={poster} alt={title} title={title}></img>
                 <div className="movie-data">
                     <h2 className="movie-title">{title}</h2>

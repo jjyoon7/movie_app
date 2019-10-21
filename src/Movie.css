@@ -1,22 +1,18 @@
-.movie-title {
-    color: #2f2f2f;
-}
-
 .movie {
     margin-bottom: 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 200px;
     background: white;
     padding: 20px;
     font-family: sans-serif;
     color: gray;
 }
 
-.effect4
+.movie-effect
 {
   position: relative;
 }
-.effect4:after
+.movie-effect:after
 {
   z-index: -1;
   position: absolute;
@@ -30,4 +26,14 @@
   background: #777;
   box-shadow: 0 15px 10px #777;
   transform: rotate(3deg);
+}
+
+.movie-title {
+    color: #2f2f2f;
+}
+
+.movie-poster {
+    width: 90%;
+    max-width: 16em;
+    box-shadow: 0 10px 6px -6px #777;
 }

@@ -3,3 +3,7 @@ body {
     background: paleturquoise;
 }
 
+.movies {
+    display: flex;
+    justify-content: space-between;
+}

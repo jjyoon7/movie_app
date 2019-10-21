@@ -10,7 +10,7 @@ export default function App() {
   const getMovies = async () => {
 
     const {data: {data: { movies }}} = await axios.get("https://yts.lt/api/v2/list_movies.json?sort_by=rating");
-    setMovie(movies)
+    setMovie(movies.slice(1, 6))
     // setMovie({movies})
     setLoading(false)
 
